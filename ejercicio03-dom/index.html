@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br>
+		Mail: <input type="text" name="email" id="email"><br>
+	</form> 
+	<button id="boton" type="submit" >Mostrar</button>
+	<!--<button onclick="myFunction()">Mostrar</button> este es el boton que venia en el ejercicio como por defecto--> 
+
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+
+	<div id="cajita"></div>
+
+	<script>
+		var botonDos = document.getElementById('boton');
+		botonDos.addEventListener("click", function(apretar){
+			apretar.preventDefault();
+			var nombre = document.getElementById('name').value;
+			var mail = document.getElementById('email').value;
+			var lugar = document.getElementById('cajita');
+			lugar.innerHTML = "El nombre es: " + nombre + "<br>" + "El correo es: " + mail;
+		})
+
+		//esta es la función que vendría por defecto con el ejercicio pero que no me permitiría imprimir la respuesta 
+		/*function myFunction() {
+			var nombre = document.getElementById('name').value;
+			var mail = document.getElementById('email').value;
+			alert("El nombre es: " + nombre + " " + "El correo es: " + mail);
+		}*/
+
+	</script>
+</body>
+</html>
